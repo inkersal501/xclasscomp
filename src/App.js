@@ -5,23 +5,23 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      number:0
+      count:0
     }
   }
-  handleIncrement = ()=>{
-    this.setState(prev=>({number : prev.number+1}));
+  increment = ()=>{
+    this.setState(prev=>({count : prev.count+1}));
   };
-  handleDecrement = ()=>{
-    this.setState(prev=>({number : prev.number-1}));
+  decrement = ()=>{
+    this.setState(prev=>({count : prev.count-1}));
   };
   render() {
     return (
       <div className="App">
         <h1>Counter App</h1>
-        <p>Count: {this.state.number}</p>
+        <p>Count: {this.state.count}</p>
         <div>
-          <button onClick={this.handleIncrement}>Increment</button>
-          <button onClick={this.handleDecrement}>Decrement</button>
+          <button onClick={this.increment}>Increment</button>
+          <button onClick={this.decrement}>Decrement</button>
         </div>
       </div>
     );
